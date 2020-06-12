@@ -3,7 +3,7 @@
 use strict;
 use CLI;
 
-# ARGS[0-5]:  servername domain pass4server newusername pass4user realnameuser
+# ARGS[0-4]:  domain pass4server newusername pass4user realnameuser
 
 # variables for connection to server
 my $CGServerAddress = 'mail.'.$ARGV[0]; 
