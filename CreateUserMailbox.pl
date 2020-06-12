@@ -12,9 +12,9 @@ my $Login = 'postmaster@'.$ARGV[0];
 my $Password4server = $ARGV[1]; 
 
 # variables new mailboxe's
-my $Account = $ARGV[3];
-my $RealName = $ARGV[5];
-my $Password4user = $ARGV[4];
+my $Account = $ARGV[2];
+my $RealName = $ARGV[4];
+my $Password4user = $ARGV[3];
 my $UserData;
   @$UserData{'RealName'}=$RealName;
   @$UserData{'Password'}=$Password4user;
@@ -44,7 +44,7 @@ foreach $userName (sort keys %$accountList) {
 
 #  Create new Account
 if($cli->CreateAccount(accountName => $Account, settings => $UserData)) {
-    print "Created Username = $Account";
+    print "Created Username = $Account\n";
 } 
 else {
     errormsg("Can't create '$Account' account: ".$cli->getErrMessage);
